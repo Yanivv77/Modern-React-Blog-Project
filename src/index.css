@@ -5,6 +5,7 @@
   margin: 0;
   font-family: "Quicksand";
   color: #333;
+  background-color: #fafafa;
 }
 .navbar {
   padding: 20px;
@@ -12,7 +13,7 @@
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #220eda;
 }
 .navbar h1 {
   color: #3551f1;
@@ -24,6 +25,7 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  
 }
 .navbar a:hover {
   color: #3551f1;
@@ -35,10 +37,13 @@
   border-radius: 8px;
 }
 
+
 .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+  color: white;
+  
 }
 
 /* blog previews / list */
@@ -46,12 +51,16 @@
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
+  
 }
 .blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  
 }
 .blog-preview h2 {
   font-size: 20px;
   color: #3551f1;
   margin-bottom: 8px;
+
 }
+
