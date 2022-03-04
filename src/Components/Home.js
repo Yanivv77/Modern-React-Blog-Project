@@ -3,6 +3,7 @@ import BlogList from './Reusable/BlogList'
 
 function Home() {
   const [blogs, setBlogs] = useState(null)
+  const [IsPending, setIsPending] = useState(true)
 
   useEffect(() => {
     fetch('http://localhost:8000/blogs')
@@ -11,11 +12,16 @@ function Home() {
       })
       .then((data) => {
         setBlogs(data)
+        setIsPending(false)
+      })
+      .catch((err) => {
+        console.log()
       })
   }, [])
 
   return (
     <div className="home">
+      {IsPending && <div>Loading ...</div>}
       {blogs && <BlogList blogs={blogs} title="All Blogs" />}
     </div>
   )
