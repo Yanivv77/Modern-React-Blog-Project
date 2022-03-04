@@ -4,14 +4,7 @@ function Navbar() {
       <h1>Yaniv Blog</h1>
       <div className="links">
         <a href="/">Home</a>
-        <a
-          href="/create"
-          style={{
-            color: 'white',
-            backgroundColor: '#f1356d',
-            borderRadius: '8px',
-          }}
-        >
+        <a className="navbarEnd" href="/create">
           New Blog
         </a>
       </div>
