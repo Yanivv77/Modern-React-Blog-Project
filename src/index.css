@@ -20,6 +20,7 @@
 }
 .navbar .links {
   margin-left: auto;
+  text-decoration: none
 }
 .navbar a {
   margin-left: 16px;
@@ -28,12 +29,18 @@
   
 }
 .navbar a:hover {
-  color: #3551f1;
+  color: #35bcf1;
 }
 
 .navbarEnd{
   color: white;
   background-color: #3551f1;
+  border-radius: 8px;
+}
+
+.navbarEnd:hover{
+  color: rgba(196, 26, 26, 0.952);
+  background-color: #080602;
   border-radius: 8px;
 }
 
@@ -64,3 +71,6 @@
 
 }
 
+.blog-preview a{
+  text-decoration: none;
+}
