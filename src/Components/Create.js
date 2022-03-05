@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 const Create = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [author, setAuthor] = useState('mario')
+  const history = useHistory()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -14,7 +16,8 @@ const Create = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(blog),
     }).then(() => {
-      console.log('new blog added')
+      // history.go(-1);
+      history.push('/')
     })
   }
 
@@ -28,7 +31,7 @@ const Create = () => {
         <textarea required value={body} onChange={(e) => setBody(e.target.value)}></textarea>
         <label>Blog author:</label>
         <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-          <option value="mario">mario</option>
+          <option value="mario">Yaniv</option>
           <option value="moshe">moshe</option>
         </select>
         <button>Add Blog</button>
