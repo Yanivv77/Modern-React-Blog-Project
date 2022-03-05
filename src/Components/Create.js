@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Create = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
-  const [author, setAuthor] = useState('mario')
-  const history = useHistory()
+  const [author, setAuthor] = useState('Yaniv')
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -16,8 +16,7 @@ const Create = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(blog),
     }).then(() => {
-      // history.go(-1);
-      history.push('/')
+      navigate('/')
     })
   }
 
@@ -32,7 +31,7 @@ const Create = () => {
         <label>Blog author:</label>
         <select value={author} onChange={(e) => setAuthor(e.target.value)}>
           <option value="mario">Yaniv</option>
-          <option value="moshe">moshe</option>
+          <option value="moshe">Moshe</option>
         </select>
         <button>Add Blog</button>
       </form>
